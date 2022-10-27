@@ -3,8 +3,7 @@ ARG VARIANT=18-bullseye
 FROM mcr.microsoft.com/vscode/devcontainers/javascript-node:${VARIANT}
 
 # [Optional] Uncomment this section to install additional OS packages.
-# RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-#     && apt-get -y install --no-install-recommends <your-package-list-here>
+RUN apt update && apt install -y libx11-xcb-dev libxtst6 libxss1 libgconf-2-4 libnss3-dev libasound2 libatk-bridge2.0-0 libgtk-3-dev fonts-ipafont-gothic fonts-wqy-zenhei fonts-thai-tlwg fonts-kacst fonts-freefont-ttf
 
 # [Optional] Uncomment if you want to install an additional version of node using nvm
 # ARG EXTRA_NODE_VERSION=10
